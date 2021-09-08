@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Loan Calculator</title>
+    <style>
+      #loading,#result
+      {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading pb-3">Loan Calculator</h1>
+            <form id="loan-form">
+              <div class="form-group my-3">
+                <div class="input-group">
+                  <span class="input-group-addon py-1 px-3 " style="background-color: #D3D3D3;">$</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <div class="input-group">
+                  <span class="input-group-addon py-1" style="background-color: #D3D3D3; padding: 0 14px;">%</span>
+                  <input type="number" class="form-control" id="interest" placeholder="Interest">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="years" placeholder="Years to Repay">
+              </div>
+              <div class="form-group my-3">
+                <input type="submit" class="btn btn-dark btn-block" value="Calculate" style="width: 100%;">
+              </div>
+            </form>
+            <!--  Loader Here-->
+            <div id="loading">
+              <img src="images/WMDx.gif" alt="Loading gif">
+            </div>
+            <!-- Results -->
+            
+            <div id="result" class="pt-2 mb-3">
+              <h2 class="mb-4">Results</h2>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon px-2 py-2" style="background-color: #E5E4E2;">Monthly Payment</span>
+                  <input type="number" class="form-control" id="monthly-payment" disabled>
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <div class="input-group">
+                  <span class="input-group-addon py-2"  style="background-color: #E5E4E2; padding: 0 31.5px 0 10px;">Total Payment</span>
+                  <input type="number" class="form-control" id="total-payment" disabled>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon py-2"  style="background-color: #E5E4E2; padding: 0 40px 0 10px;">Total Interest</span>
+                  <input type="number" class="form-control" id="total-interest" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
